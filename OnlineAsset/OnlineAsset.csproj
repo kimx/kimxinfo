@@ -113,7 +113,7 @@
     <Content Include="kim-metro\js\metro.js" />
     <Content Include="kim-metro\js\metro.min.js" />
     <Content Include="tools\TimeTable.html" />
-    <Content Include="tools\TimeTableApp.js" />
+    <Content Include="tools\TimeTable.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
