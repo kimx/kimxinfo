@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular.min.js"></script>
+    <script src="TimeTable.js"></script>
+    <link  rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+</head>
+<body>
+    <div ng-app="TimeTableApp" ng-controller="TimeTableController as vm">
+        <div class="row">
+            <div class="col-md-4 form-inline">
+                <select ng-model="vm.Model.CurrentTimeZone" ng-options="m.Name for m in vm.Model.TimeZones" class="form-control"></select>
+                <input type="time" name="currentTime" ng-model="vm.Model.CurrentTime" class="form-control" />
+            </div>
+            <div class="col-md-12">
+                <table class="table table-responsive table-bordered table-hover" style="max-width:1100px">
+                    <tr ng-repeat="h in vm.Model.TimeZones track by h.Name">
+                        <th>{{h.Name}}</th>
+                        <td ng-click="vm.SelectHour($index,h)" ng-repeat="hour in vm.GetHours() track by $index" ng-class="vm.CurrentHourClass($index,h)" style="cursor:pointer">
+                            {{vm.CalTimeZoneHour($index,h)}}
+                        </td>
+                        <th>{{vm.GetCurrentDateTime(h) | date:'yyyy-MM-dd HH:mm'}}</th>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

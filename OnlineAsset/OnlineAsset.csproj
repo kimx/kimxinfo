@@ -112,11 +112,14 @@
     <Content Include="kim-metro\js\metro-win-start-screen.js" />
     <Content Include="kim-metro\js\metro.js" />
     <Content Include="kim-metro\js\metro.min.js" />
+    <Content Include="tools\TimeTable.html" />
+    <Content Include="tools\TimeTableApp.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
